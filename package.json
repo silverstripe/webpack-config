@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.1.6",
+	"version": "0.2.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
@@ -8,7 +8,7 @@
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/silverstripe/silverstripe-admin.git"
+		"url": "git://github.com/silverstripe/webpack-config.git"
 	},
 	"keywords": [
 		"silverstripe",
@@ -20,9 +20,9 @@
 	"author": "SilverStripe Ltd",
 	"license": "BSD-3-Clause",
 	"bugs": {
-		"url": "https://github.com/silverstripe/silverstripe-admin/issues"
+		"url": "https://github.com/silverstripe/webpack-config/issues"
 	},
-	"homepage": "https://github.com/silverstripe/silverstripe-admin",
+	"homepage": "https://github.com/silverstripe/webpack-config",
 	"dependencies": {
 		"autoprefixer": "^6.4.0",
 		"babel-core": "^6.24.1",
