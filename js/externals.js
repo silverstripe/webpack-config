@@ -54,6 +54,7 @@ module.exports = () => ({
   'components/Badge/Badge': 'Badge',
   'containers/FormBuilderLoader/FormBuilderLoader': 'FormBuilderLoader',
   'containers/InsertMediaModal/InsertMediaModal': 'InsertMediaModal',
+  'containers/InsertLinkModal/InsertLinkModal': 'InsertLinkModal',
   'state/breadcrumbs/BreadcrumbsActions': 'BreadcrumbsActions',
   'state/schema/SchemaActions': 'SchemaActions',
   'state/records/RecordsActions': 'RecordsActions',
@@ -68,4 +69,6 @@ module.exports = () => ({
   'lib/Config': 'Config',
   'lib/Injector': 'Injector',
   'lib/reduxFieldReducer': 'reduxFieldReducer',
+  'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
+  'lib/ShortcodeSerialiser': 'ShortcodeSerialiser',
 });
