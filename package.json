@@ -1,12 +1,14 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
 	},
 	"bin": {
-		"webpack": "./node_modules/.bin/webpack"
+		"webpack": "./node_modules/.bin/webpack",
+		"sass-lint": "./node_modules/.bin/sass-lint",
+		"eslint": "./node_modules/.bin/eslint"
 	},
 	"main": "index.js",
 	"repository": {
