@@ -1,9 +1,12 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
+	},
+	"bin": {
+		"webpack": "./node_modules/.bin/webpack"
 	},
 	"main": "index.js",
 	"repository": {
