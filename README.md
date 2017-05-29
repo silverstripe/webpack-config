@@ -89,14 +89,14 @@ module.exports = config;
 You can easily extend the configuration provided, for example to add another external to the list provided:
 ```js
 const config = {
-  module: moduleJS(ENV, PATHS),
+  external: externalJS(ENV, PATHS),
 }
 ```
 will become:
 ```js
 const config = {
-  module: Object.assign({},
-    moduleJS(ENV, PATHS),
+  external: Object.assign({},
+    externalJS(ENV, PATHS),
     {
       'components/MyCustomComponent': 'MyCustomComponent',
     }
