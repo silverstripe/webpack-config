@@ -63,6 +63,7 @@ module.exports = () => ({
   'lib/ReducerRegister': 'ReducerRegister',
   'lib/ReactRouteRegister': 'ReactRouteRegister',
   'lib/SilverStripeComponent': 'SilverStripeComponent',
+  'lib/formatWrittenNumber': 'formatWrittenNumber',
   'lib/Router': 'Router',
   'lib/schemaFieldValues': 'schemaFieldValues',
   'lib/Config': 'Config',
