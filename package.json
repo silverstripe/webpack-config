@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
@@ -57,7 +57,7 @@
 		"sass-loader": "^6.0.5",
 		"script-loader": "^0.7.0",
 		"url-loader": "^0.5.8",
-		"webpack": "^2.6.0"
+		"webpack": "^2.6.1"
 	},
 	"jest": {
 		"roots": [
