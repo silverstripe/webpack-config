@@ -61,6 +61,7 @@ module.exports = () => ({
   'state/records/RecordsActionTypes': 'RecordsActionTypes',
   'lib/DataFormat': 'DataFormat',
   'lib/Backend': 'Backend',
+  'lib/getFormState': 'getFormState',
   'lib/ReactRouteRegister': 'ReactRouteRegister',
   'lib/SilverStripeComponent': 'SilverStripeComponent',
   'lib/formatWrittenNumber': 'formatWrittenNumber',
