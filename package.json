@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
