@@ -52,6 +52,7 @@ module.exports = () => ({
   'components/ListGroup/ListGroupItem': 'ListGroupItem',
   'components/FormAlert/FormAlert': 'FormAlert',
   'components/Badge/Badge': 'Badge',
+  'components/Focusedzone/Focusedzone': 'Focusedzone',
   'containers/FormBuilderLoader/FormBuilderLoader': 'FormBuilderLoader',
   'containers/InsertMediaModal/InsertMediaModal': 'InsertMediaModal',
   'containers/InsertLinkModal/InsertLinkModal': 'InsertLinkModal',
