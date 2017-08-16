@@ -4,7 +4,7 @@ This NPM package provides a shared common webpack configuration used across all 
 
 ## What this package gives you:
 For JS:
-* **externals.js**: Provides references to packages that are provided by silverstripe-admin or another core silverstripe module. This will tell your webpack to not include the package in your output file, that it is provided and and accessible through a global variable.
+* **externals.js**: Provides references to packages that are provided by silverstripe-admin or another core silverstripe module. This will tell your webpack to not include the package in your output file, that it is provided and accessible through a global variable.
 * **modules.js**: The common list of loaders for javascript which webpack should use to get a standard output build, such as babel and modernizr.
 * **plugins.js**: Plugins used by webpack, such as:
   * A global `Provide` call for `jQuery`
