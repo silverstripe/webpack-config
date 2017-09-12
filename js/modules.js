@@ -30,8 +30,7 @@ module.exports = (ENV, { SRC, MODULES, THIRDPARTY }) => {
         loader: 'babel-loader',
         options: {
           presets: [
-            ['es2015', { modules: false }],
-            'es2016',
+            ['env', { modules: false }],
             'react',
           ],
           plugins: [
