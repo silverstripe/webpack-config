@@ -1,9 +1,5 @@
 // turn these back on progressively
 const todo = {
-  'react/no-unused-prop-types': [
-    // turn to error after this cleanup story is done
-    'warn'
-  ],
   'react/jsx-filename-extension': [
     // most disruptive with the file renames
     'off'
@@ -70,6 +66,10 @@ module.exports = {
           'allowForLoopAfterthoughts': true
         }
       ],
+      'react/no-unused-prop-types': [
+        // we want to capture prop types that aren't used
+        'error'
+      ],
       // May revise this when as we get more cleanup done
       'react/forbid-prop-types': [
         'off'
@@ -87,6 +87,8 @@ module.exports = {
       'no-useless-escape': [
         'off'
       ],
+      // these accessibility rules will be a detriment to existing code/styles,
+      // perhaps in the future
       'jsx-a11y/href-no-hash': [
         'off'
       ],
