@@ -23,7 +23,7 @@ module.exports = (ENV) => {
     new webpack.DefinePlugin({
       'process.env': {
         // Builds React in production mode, avoiding console warnings
-        NODE_ENV: JSON.stringify(ENV),
+        NODE_ENV: JSON.stringify(ENV || 'development'),
       },
     }),
     uglifyPlugin,
