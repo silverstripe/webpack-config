@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.2.9",
+	"version": "0.3.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
@@ -32,16 +32,17 @@
 		"autoprefixer": "^6.4.0",
 		"babel-core": "^6.24.1",
 		"babel-loader": "^7.0.0",
-		"babel-plugin-transform-es2015-modules-umd": "^6.6.5",
-		"babel-plugin-transform-object-rest-spread": "^6.8.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-es2016": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.0",
 		"babel-preset-react": "^6.24.1",
 		"css-loader": "^0.28.1",
-		"eslint": "^2.5.3",
-		"eslint-config-airbnb": "^6.2.0",
+		"eslint": "^4.6.1",
+		"eslint-config-airbnb": "^15.1.0",
+		"eslint-config-airbnb-base": "^12.0.0",
 		"eslint-loader": "^1.7.1",
-		"eslint-plugin-react": "^4.2.3",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-jsx-a11y": "^5.1.1",
+		"eslint-plugin-react": "^7.3.0",
 		"expose-loader": "^0.7.3",
 		"extract-text-webpack-plugin": "^2.1.0",
 		"file-loader": "^0.11.1",
@@ -53,11 +54,14 @@
 		"postcss-load-config": "^1.2.0",
 		"postcss-loader": "^2.0.5",
 		"resolve-url-loader": "^2.0.2",
-		"sass-lint": "^1.9.1",
+		"sass-lint": "^1.11.1",
 		"sass-loader": "^6.0.5",
 		"script-loader": "^0.7.0",
 		"url-loader": "^0.5.8",
 		"webpack": "^2.6.1"
+	},
+	"resolutions": {
+		"eslint": "^4.6.1"
 	},
 	"jest": {
 		"roots": [
@@ -76,8 +80,7 @@
 	},
 	"babel": {
 		"presets": [
-			"es2015",
-			"es2016",
+			["env", { "modules": false }],
 			"react"
 		],
 		"plugins": [
