@@ -113,10 +113,10 @@ module.exports = {
         'moduleDirectory': [
           '.',
           'client/src',
-          '../silverstripe-admin/client/src',
-          '../silverstripe-admin/node_modules',
-          'silverstripe-admin/client/src',
-          'silverstripe-admin/node_modules',
+          '../admin/client/src',
+          '../admin/node_modules',
+          'vendor/silverstripe/admin/client/src',
+          'vendor/silverstripe/admin/node_modules',
           'node_modules'
         ]
       }

@@ -63,8 +63,8 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }) => {
               options: {
                 includePaths: [
                   Path.resolve(SRC, 'styles'),
-                  Path.resolve(ROOT, 'silverstripe-admin/client/src/styles'),
-                  Path.resolve(ROOT, '../silverstripe-admin/client/src/styles'),
+                  Path.resolve(ROOT, 'vendor/silverstripe/admin/client/src/styles'),
+                  Path.resolve(ROOT, '../admin/client/src/styles'),
                 ],
                 sourceMap: true,
               },
