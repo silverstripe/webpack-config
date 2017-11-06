@@ -7,8 +7,7 @@
 	},
 	"bin": {
 		"webpack": "./node_modules/.bin/webpack",
-		"sass-lint": "./node_modules/.bin/sass-lint",
-		"eslint": "./node_modules/.bin/eslint"
+		"sass-lint": "./node_modules/.bin/sass-lint"
 	},
 	"main": "index.js",
 	"repository": {
@@ -36,13 +35,6 @@
 		"babel-preset-env": "^1.6.0",
 		"babel-preset-react": "^6.24.1",
 		"css-loader": "^0.28.1",
-		"eslint": "^4.6.1",
-		"eslint-config-airbnb": "^15.1.0",
-		"eslint-config-airbnb-base": "^12.0.0",
-		"eslint-loader": "^1.7.1",
-		"eslint-plugin-import": "^2.7.0",
-		"eslint-plugin-jsx-a11y": "^5.1.1",
-		"eslint-plugin-react": "^7.3.0",
 		"expose-loader": "^0.7.3",
 		"extract-text-webpack-plugin": "^2.1.0",
 		"file-loader": "^0.11.1",
