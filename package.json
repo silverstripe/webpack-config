@@ -1,13 +1,12 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
 	},
 	"bin": {
-		"webpack": "./node_modules/.bin/webpack",
-		"sass-lint": "./node_modules/.bin/sass-lint"
+		"webpack": "./node_modules/.bin/webpack"
 	},
 	"main": "index.js",
 	"repository": {
@@ -46,7 +45,6 @@
 		"postcss-load-config": "^1.2.0",
 		"postcss-loader": "^2.0.5",
 		"resolve-url-loader": "^2.0.2",
-		"sass-lint": "^1.11.1",
 		"sass-loader": "^6.0.5",
 		"script-loader": "^0.7.0",
 		"url-loader": "^0.5.8",
