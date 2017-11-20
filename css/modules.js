@@ -105,7 +105,7 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
           : undefined,
       },
       {
-        test: /\.(png|gif|jpg|svg)$/,
+        test: /\.(png|gif|jpe?g|svg)$/,
         exclude: /fonts\/([\w_-]+)\.svg$/,
         loader: 'url-loader',
         options: {
