@@ -24,10 +24,19 @@ const SUPPORTED_BROWSERS = [
  * @param {string} SRC The path to the source scss files
  * @param {string} ROOT The path to the root of the project, this is so we can scope for
  * silverstripe-admin variables.scss
+ * @param {boolean} useStyle Determines whether to use the style loader or extract text plugin
  * @returns {{rules: [*,*,*,*]}}
  */
-module.exports = (ENV, { FILES_PATH, SRC, ROOT }) => {
+module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
   const cssLoaders = [
+    (useStyle)
+      ? ({
+        loader: 'style-loader',
+        options: {
+          sourceMap: true,
+        },
+      })
+      : null,
     {
       loader: 'css-loader',
       options: {
@@ -45,43 +54,58 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }) => {
         ],
       },
     },
+  ].filter(loader => loader);
+  const scssLoaders = [
+    ...cssLoaders,
+    {
+      loader: 'resolve-url-loader',
+    },
+    {
+      loader: 'sass-loader',
+      options: {
+        includePaths: [
+          Path.resolve(SRC, 'styles'),
+          Path.resolve(ROOT, 'vendor/silverstripe/admin/client/src/styles'),
+          Path.resolve(ROOT, '../admin/client/src/styles'),
+          Path.resolve(ROOT, '../../silverstripe/admin/client/src/styles'),
+        ],
+        sourceMap: true,
+      },
+    },
   ];
 
   return {
     rules: [
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          publicPath: FILES_PATH,
-          use: [
-            ...cssLoaders,
-            {
-              loader: 'resolve-url-loader',
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                includePaths: [
-                  Path.resolve(SRC, 'styles'),
-                  Path.resolve(ROOT, 'vendor/silverstripe/admin/client/src/styles'),
-                  Path.resolve(ROOT, '../admin/client/src/styles'),
-                  Path.resolve(ROOT, '../../silverstripe/admin/client/src/styles'),
-                ],
-                sourceMap: true,
-              },
-            },
-          ],
-        }),
+        loader: useStyle
+          ? undefined
+          : (
+            ExtractTextPlugin.extract({
+              publicPath: FILES_PATH,
+              use: scssLoaders,
+            })
+          ),
+        use: useStyle
+          ? scssLoaders
+          : undefined,
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          publicPath: FILES_PATH,
-          use: cssLoaders,
-        }),
+        loader: useStyle
+          ? undefined
+          : (
+            ExtractTextPlugin.extract({
+              publicPath: FILES_PATH,
+              use: cssLoaders,
+            })
+          ),
+        use: useStyle
+          ? cssLoaders
+          : undefined,
       },
       {
-        test: /\.(png|gif|jpg|svg)$/,
+        test: /\.(png|gif|jpe?g|svg)$/,
         exclude: /fonts\/([\w_-]+)\.svg$/,
         loader: 'url-loader',
         options: {
