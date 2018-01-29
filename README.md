@@ -38,7 +38,7 @@ const {
 } = webpackConfig;
 
 const ENV = process.env.NODE_ENV;
-const PATH = {
+const PATHS = {
   // the root path, where your webpack.config.js is located.
   ROOT: Path.resolve(),
   // your node_modules folder name, or full path
