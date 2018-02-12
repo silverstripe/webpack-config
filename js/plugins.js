@@ -26,6 +26,7 @@ module.exports = (ENV) => {
         NODE_ENV: JSON.stringify(ENV || 'development'),
       },
     }),
+    new webpack.NamedModulesPlugin(),
     uglifyPlugin,
   ].filter(plugin => plugin);
 };
