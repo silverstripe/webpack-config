@@ -50,6 +50,7 @@ module.exports = () => ({
   'components/Preview/Preview': 'Preview',
   'components/ListGroup/ListGroup': 'ListGroup',
   'components/ListGroup/ListGroupItem': 'ListGroupItem',
+  'components/Loading/Loading': 'Loading',
   'components/FormAlert/FormAlert': 'FormAlert',
   'components/Badge/Badge': 'Badge',
   'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
