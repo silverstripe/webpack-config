@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">= 6.x"
@@ -43,6 +43,7 @@
 		"modernizr": "^3.5.0",
 		"modernizr-loader": "^1.0.1",
 		"node-sass": "^4.5.3",
+		"npm": "^6.0.0",
 		"postcss-load-config": "^1.2.0",
 		"postcss-loader": "^2.0.5",
 		"resolve-url-loader": "^2.0.2",
@@ -72,7 +73,12 @@
 	},
 	"babel": {
 		"presets": [
-			["env", { "modules": false }],
+			[
+				"env",
+				{
+					"modules": false
+				}
+			],
 			"react"
 		],
 		"plugins": [
