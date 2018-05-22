@@ -29,7 +29,7 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/,
-        exclude: /fonts\/([\w_-]+)\.svg$/,
+        exclude: /fonts[\///]([\w_-]+)\.svg$/,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
