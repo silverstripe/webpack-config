@@ -66,7 +66,7 @@ module.exports = () => ({
   'state/schema/SchemaActions': 'SchemaActions',
   'state/records/RecordsActions': 'RecordsActions',
   'state/records/RecordsActionTypes': 'RecordsActionTypes',
-  'state/viewMode/viewModeActions': 'ViewModeActions',
+  'state/viewMode/ViewModeActions': 'ViewModeActions',
   'lib/DataFormat': 'DataFormat',
   'lib/Backend': 'Backend',
   'lib/getFormState': 'getFormState',
