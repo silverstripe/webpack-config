@@ -106,7 +106,7 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/,
-        exclude: /fonts[\///]([\w_-]+)\.svg$/,
+        exclude: /fonts[\/\\]([\w_-]+)\.svg$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
@@ -114,7 +114,7 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
         },
       },
       {
-        test: /fonts[\///]([\w_-]+)\.(woff|eot|ttf|svg)$/,
+        test: /fonts[\/\\]([\w_-]+)\.(woff2?|eot|ttf|svg)$/,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]',
