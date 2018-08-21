@@ -56,6 +56,7 @@ module.exports = () => ({
   'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
   'components/Focusedzone/Focusedzone': 'Focusedzone',
   'components/ViewModeToggle/ViewModeToggle': 'ViewModeToggle',
+  'components/ResizeAware/ResizeAware': 'ResizeAware',
   'components/Tag/Tag': 'Tag',
   'components/Tag/TagList': 'TagList',
   'components/Tag/CompactTagList': 'CompactTagList',
