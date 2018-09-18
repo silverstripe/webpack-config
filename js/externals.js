@@ -35,6 +35,7 @@ module.exports = () => ({
   'react-dnd': 'ReactDND',
   'react-dnd-html5-backend': 'ReactDNDHtml5Backend',
   validator: 'validator',
+  'prop-types': 'PropTypes',
 
   // provided by silverstripe or modules
   'components/Accordion/Accordion': 'Accordion',
