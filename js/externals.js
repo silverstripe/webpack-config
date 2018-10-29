@@ -87,4 +87,5 @@ module.exports = () => ({
   'lib/reduxFieldReducer': 'reduxFieldReducer',
   'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
   'lib/ShortcodeSerialiser': 'ShortcodeSerialiser',
+  'lib/withDragDropContext': 'withDragDropContext',  
 });
