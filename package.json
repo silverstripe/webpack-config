@@ -3,7 +3,7 @@
 	"version": "0.14.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
-		"node": ">= 6.x"
+		"node": "^10.x"
 	},
 	"bin": {
 		"webpack": "./node_modules/.bin/webpack",
@@ -40,7 +40,7 @@
 		"file-loader": "^0.11.1",
 		"imports-loader": "^0.6.5",
 		"json-loader": "^0.5.4",
-		"modernizr": "^3.5.0",
+		"modernizr": "^3.6.0",
 		"modernizr-loader": "^1.0.1",
 		"node-sass": "^4.5.3",
 		"npm": "^6.0.0",
@@ -50,7 +50,7 @@
 		"sass-lint": "^1.11.1",
 		"sass-loader": "^6.0.5",
 		"script-loader": "^0.7.0",
-		"url-loader": "^0.5.8",
+		"url-loader": "^0.6.2",
 		"webpack": "^2.6.1"
 	},
 	"resolutions": {
