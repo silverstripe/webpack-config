@@ -11,6 +11,14 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
   return {
     rules: [
       {
+        test: /\.tsx?$/,
+        exclude: new RegExp(`(${MODULES}|${THIRDPARTY})`),
+        use: [
+          'babel-loader',
+          'ts-loader'
+        ]
+      },
+      {
         // .js and .jsx files are caught
         test: /\.jsx?$/,
         exclude: new RegExp(`(${MODULES}|${THIRDPARTY})`),

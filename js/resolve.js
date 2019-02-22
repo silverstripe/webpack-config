@@ -9,7 +9,7 @@
  */
 module.exports = (ENV, { ROOT, MODULES, SRC }) => ({
   modules: [ROOT, SRC, MODULES],
-  extensions: ['.json', '.js', '.jsx'],
+  extensions: ['.json', '.js', '.jsx', '.ts', '.tsx'],
   alias: {
     modernizr$: `${SRC}/.modernizrrc`,
   },
