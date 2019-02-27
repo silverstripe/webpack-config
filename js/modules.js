@@ -15,7 +15,7 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
         exclude: new RegExp(`(${MODULES}|${THIRDPARTY})`),
         use: [
           'babel-loader',
-          'ts-loader'
+          `ts-loader?configFile=${MODULES}/@silverstripe/webpack-config/tsconfig.json`
         ]
       },
       {

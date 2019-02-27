@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "React",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "client/es6src",
+    "client/jsSrc",
+    "client/lang",
+    "client/dist",
+    "webpack.config.js",
+    "webpack-vars.js",
+    "thirdparty",
+    "tests"
+  ]
+}
