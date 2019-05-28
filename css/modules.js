@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const customProperties = require('postcss-custom-properties');
 const Path = require('path');
 
 // Used for autoprefixing css properties (same as Bootstrap Aplha.2 defaults)
@@ -51,6 +52,7 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
         sourceMap: true,
         plugins: [
           autoprefixer({ browsers: SUPPORTED_BROWSERS }),
+          customProperties,
         ],
       },
     },
