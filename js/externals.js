@@ -51,6 +51,7 @@ module.exports = () => ({
   'components/Loading/Loading': 'Loading',
   'components/FormAlert/FormAlert': 'FormAlert',
   'components/Badge/Badge': 'Badge',
+  'components/VersionedBadge/VersionedBadge': 'VersionedBadge',
   'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
   'components/Focusedzone/Focusedzone': 'Focusedzone',
   'components/ViewModeToggle/ViewModeToggle': 'ViewModeToggle',
