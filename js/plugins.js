@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 /**
  * Exports the settings for plugins in webpack.config
@@ -28,5 +29,6 @@ module.exports = (ENV) => {
     }),
     new webpack.NamedModulesPlugin(),
     uglifyPlugin,
+    process.env.ANALYZE_BUNDLE && new BundleAnalyzerPlugin()
   ].filter(plugin => plugin);
 };
