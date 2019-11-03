@@ -52,7 +52,8 @@
 		"sass-loader": "^6.0.5",
 		"script-loader": "^0.7.0",
 		"url-loader": "^0.6.2",
-		"webpack": "^2.6.1"
+		"webpack": "^2.6.1",
+		"webpack-bundle-analyzer": "^3.6.0"
 	},
 	"resolutions": {
 		"eslint": "^4.6.1"
