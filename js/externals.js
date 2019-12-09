@@ -26,6 +26,7 @@ module.exports = () => ({
   'redux-thunk': 'ReduxThunk',
   redux: 'Redux',
   config: 'Config',
+  url: 'url',
   qs: 'qs',
   moment: 'moment',
   modernizr: 'modernizr',
@@ -85,5 +86,5 @@ module.exports = () => ({
   'lib/reduxFieldReducer': 'reduxFieldReducer',
   'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
   'lib/ShortcodeSerialiser': 'ShortcodeSerialiser',
-  'lib/withDragDropContext': 'withDragDropContext',  
+  'lib/withDragDropContext': 'withDragDropContext',
 });
