@@ -29,6 +29,6 @@ module.exports = (ENV) => {
     }),
     new webpack.NamedModulesPlugin(),
     uglifyPlugin,
-    process.env.ANALYZE_BUNDLE && new BundleAnalyzerPlugin()
+    process.env.ANALYZE_BUNDLE && new BundleAnalyzerPlugin({analyzerPort: 'auto'})
   ].filter(plugin => plugin);
 };
