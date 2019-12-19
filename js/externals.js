@@ -38,6 +38,8 @@ module.exports = () => ({
   // provided by silverstripe or modules
   'components/Accordion/Accordion': 'Accordion',
   'components/Accordion/AccordionBlock': 'AccordionBlock',
+  'components/Button/Button': 'Button',
+  'components/Button/BackButton': 'BackButton',
   'components/Breadcrumb/Breadcrumb': 'Breadcrumb',
   'components/FormAction/FormAction': 'FormAction',
   'components/FormBuilder/FormBuilder': 'FormBuilder',
