@@ -26,7 +26,7 @@ module.exports = () => ({
   'redux-thunk': 'ReduxThunk',
   redux: 'Redux',
   config: 'Config',
-  url: 'url',
+  url: 'NodeUrl',
   qs: 'qs',
   moment: 'moment',
   modernizr: 'modernizr',
