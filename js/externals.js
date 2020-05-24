@@ -44,6 +44,7 @@ module.exports = () => ({
   'components/FormAction/FormAction': 'FormAction',
   'components/FormBuilder/FormBuilder': 'FormBuilder',
   'components/FormBuilderModal/FormBuilderModal': 'FormBuilderModal',
+  'components/FileStatusIcon/FileStatusIcon': 'FileStatusIcon',
   'components/FieldHolder/FieldHolder': 'FieldHolder',
   'components/GridField/GridField': 'GridField',
   'components/Toolbar/Toolbar': 'Toolbar',
