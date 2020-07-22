@@ -119,7 +119,7 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
         test: /fonts[\/\\]([\w_-]+)\.(woff2?|eot|ttf|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'fonts/[name].[ext]',
+          name: 'fonts/[name].[ext]?h=[contenthash]',
         },
       },
     ],
