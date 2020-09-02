@@ -71,6 +71,7 @@ module.exports = () => ({
   'containers/InsertLinkModal/fileSchemaModalHandler': 'FileSchemaModalHandler',
   'state/breadcrumbs/BreadcrumbsActions': 'BreadcrumbsActions',
   'state/schema/SchemaActions': 'SchemaActions',
+  'state/toasts/ToastsActions': 'ToastsActions',
   'state/records/RecordsActions': 'RecordsActions',
   'state/records/RecordsActionTypes': 'RecordsActionTypes',
   'state/tabs/TabsActions': 'TabsActions',
