@@ -103,3 +103,13 @@ const config = {
   ),
 }
 ```
+
+## Release process
+
+This package will be automatically published to NPM when the following steps are taken:
+
+1. The `version` key in `package.json` is updated on `master`
+2. A new release is created in GitHub from `master`
+
+Ensure you set the new version appropriately (considering Semver) and consistently between the `version` key and the release.
+
