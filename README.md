@@ -1,5 +1,8 @@
 # webpack-config
-This NPM package provides a shared common webpack configuration used across all SilverStripe modules,
+
+[![Silverstripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
+
+This NPM package provides a shared common webpack configuration used across all Silverstripe modules,
  this aims to reduce thirdparty module developer fatigue by having a source of truth for configurations and settings used in SilverStripe's webpack.
 
 ## What this package gives you:
