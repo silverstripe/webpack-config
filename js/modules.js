@@ -11,17 +11,23 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
   return {
     rules: [
       {
-        // .js and .jsx files are caught
-        test: /\.jsx?$/,
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false, // disable the behaviour
+        },
+      },
+      {
+        // .js and .jsx and .mjs files are caught
+        test: /\.m?jsx?$/,
         exclude: new RegExp(`(${MODULES}|${THIRDPARTY})`),
         loader: 'babel-loader',
         options: {
           presets: [
-            ['env', { modules: false }],
-            'react',
+            ['@babel/preset-env', { modules: false }],
+            '@babel/preset-react',
           ],
           plugins: [
-            'transform-object-rest-spread',
+
           ],
           comments: false,
           cacheDirectory: (ENV !== 'production'),
