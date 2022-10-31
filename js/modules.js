@@ -46,12 +46,13 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
         use: 'script-loader',
       },
       {
-        test: /\.modernizrrc$/,
-        use: [
-          'modernizr-loader',
-          'json-loader',
-        ],
+        test: /\.modernizrrc.js$/,
+        use: [ '@sect/modernizr-loader' ]
       },
+      {
+        test: /\.modernizrrc(\.json)?$/,
+        use: [ '@sect/modernizr-loader', 'json-loader' ]
+      }
     ],
   };
 };

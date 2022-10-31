@@ -24,40 +24,37 @@ const SUPPORTED_BROWSERS = [
  * @param {string} SRC The path to the source scss files
  * @param {string} ROOT The path to the root of the project, this is so we can scope for
  * silverstripe-admin variables.scss
- * @param {boolean} useStyle Determines whether to use the style loader or extract text plugin
  * @returns {{rules: [*,*,*,*]}}
  */
-module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
+module.exports = (ENV, { FILES_PATH, SRC, ROOT }) => {
   const cssLoaders = [
-    (useStyle)
-      ? ({
+    {
         loader: 'style-loader',
-        options: {
-          sourceMap: true,
-        },
-      })
-      : null,
+    },
     {
       loader: MiniCssExtractPlugin.loader,
-      options: {
-        publicPath: FILES_PATH,
-      },
+      // options: {
+      //   publicPath: FILES_PATH,
+      // },
     },
     {
       loader: 'css-loader',
       options: {
         sourceMap: true,
-        minimize: true,
-        discardComments: true,
+        // url: false,
+        // minimize: true,
+        // discardComments: true,
       },
     },
     {
       loader: 'postcss-loader',
       options: {
         sourceMap: true,
-        plugins: [
-          customProperties,
-        ],
+        postcssOptions: {
+          plugins: [
+            customProperties,
+          ],
+        }
       },
     },
   ].filter(loader => loader);
@@ -65,16 +62,23 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
     ...cssLoaders,
     {
       loader: 'resolve-url-loader',
+      options: {
+        sourceMap: true,
+      }
     },
     {
       loader: 'sass-loader',
       options: {
-        includePaths: [
-          Path.resolve(SRC, 'styles'),
-          Path.resolve(ROOT, 'vendor/silverstripe/admin/client/src/styles'),
-          Path.resolve(ROOT, '../admin/client/src/styles'),
-          Path.resolve(ROOT, '../../silverstripe/admin/client/src/styles'),
-        ],
+        sassOptions: {
+          includePaths: [
+            Path.resolve(SRC, 'styles'),
+            Path.resolve(SRC, 'images'),
+            Path.resolve(ROOT, 'vendor/silverstripe/admin/client/src/styles'),
+            Path.resolve(ROOT, '../admin/client/src/images'),
+            Path.resolve(ROOT, '../../silverstripe/admin/client/src/styles'),
+          ]
+        },
+        implementation: require('sass'),
         sourceMap: true,
       },
     },
@@ -84,15 +88,11 @@ module.exports = (ENV, { FILES_PATH, SRC, ROOT }, { useStyle } = {}) => {
     rules: [
       {
         test: /\.scss$/,
-        use: useStyle
-          ? scssLoaders
-          : undefined,
+        use: scssLoaders
       },
       {
         test: /\.css$/,
-        use: useStyle
-          ? cssLoaders
-          : undefined,
+        use: cssLoaders
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/,
