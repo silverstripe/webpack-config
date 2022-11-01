@@ -3,19 +3,11 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 /**
  * Exports the settings for plugins in webpack.config
- *
- * NOTE:
- * We do not normally require UglifyJS, which we've found causes a significant slowdown in
- * build times but no difference between file sizes.
- * We've used UglifyJS in production build to remove all comments
+ * @param {string} ENV Environment to build for, expects 'production' for production and
+ * anything else for non-production
+ * @param {object} PATHS Various important paths - reserved in case they're needed in the future
  */
-module.exports = (ENV) => {
-  const uglifyPlugin = (ENV === 'production')
-    ? new webpack.optimize.UglifyJsPlugin({
-      comments: false,
-    })
-    : null;
-
+module.exports = (ENV, PATHS) => {
   return [
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
@@ -27,8 +19,6 @@ module.exports = (ENV) => {
         NODE_ENV: JSON.stringify(ENV || 'development'),
       },
     }),
-    new webpack.NamedModulesPlugin(),
-    uglifyPlugin,
-    process.env.ANALYZE_BUNDLE && new BundleAnalyzerPlugin({analyzerPort: 'auto'})
+    process.env.ANALYZE_BUNDLE && new BundleAnalyzerPlugin({analyzerPort: 'auto'}),
   ].filter(plugin => plugin);
 };
