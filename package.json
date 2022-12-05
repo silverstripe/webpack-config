@@ -1,13 +1,9 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "1.7.0",
+	"version": "2.0.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
-		"node": "^10.x"
-	},
-	"bin": {
-		"webpack": "./node_modules/.bin/webpack",
-		"sass-lint": "./node_modules/.bin/sass-lint"
+		"node": ">=18.x"
 	},
 	"main": "index.js",
 	"repository": {
@@ -28,35 +24,32 @@
 	},
 	"homepage": "https://github.com/silverstripe/webpack-config",
 	"dependencies": {
-		"autoprefixer": "^6.4.0",
-		"babel-core": "^6.24.1",
-		"babel-loader": "^7.0.0",
-		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-env": "^1.6.0",
-		"babel-preset-react": "^6.24.1",
-		"css-loader": "^0.28.1",
-		"expose-loader": "^0.7.3",
-		"extract-text-webpack-plugin": "^2.1.0",
-		"file-loader": "^0.11.1",
-		"imports-loader": "^0.6.5",
-		"json-loader": "^0.5.4",
-		"modernizr": "^3.6.0",
-		"modernizr-loader": "^1.0.1",
-		"node-sass": "^4.5.3",
-		"npm": "^6.0.0",
-		"postcss-custom-properties": "^8.0.10",
-		"postcss-load-config": "^1.2.0",
-		"postcss-loader": "^2.0.5",
-		"resolve-url-loader": "^2.0.2",
-		"sass-lint": "^1.11.1",
-		"sass-loader": "^6.0.5",
-		"script-loader": "^0.7.0",
-		"url-loader": "^0.6.2",
-		"webpack": "^2.6.1",
-		"webpack-bundle-analyzer": "^3.6.0"
-	},
-	"resolutions": {
-		"eslint": "^4.6.1"
+		"@babel/core": "^7.19.6",
+		"@babel/preset-env": "^7.19.4",
+		"@babel/preset-react": "^7.18.6",
+		"@sect/modernizr-loader": "^1.0.3",
+		"autoprefixer": "^10.4.13",
+		"babel-loader": "^9.0.1",
+		"core-js": "^3.26.0",
+		"css-loader": "^6.7.1",
+		"expose-loader": "^4.0.0",
+		"ignore-emit-webpack-plugin": "^2.0.6",
+		"imports-loader": "^4.0.1",
+		"json-loader": "^0.5.7",
+		"lodash": "^4.17.21",
+		"mini-css-extract-plugin": "^2.6.1",
+		"modernizr": "^3.12.0",
+		"npm": "^8.19.2",
+		"postcss": "^8.4.18",
+		"postcss-custom-properties": "^12.1.10",
+		"postcss-load-config": "^4.0.1",
+		"postcss-loader": "^7.0.1",
+		"resolve-url-loader": "^5.0.0",
+		"sass": "^1.55.0",
+		"sass-loader": "^13.1.0",
+		"stylelint": "^14.14.0",
+		"webpack": "^5.74.0",
+		"webpack-bundle-analyzer": "^4.7.0"
 	},
 	"jest": {
 		"roots": [
@@ -76,15 +69,12 @@
 	"babel": {
 		"presets": [
 			[
-				"env",
+				"@babel/preset-env",
 				{
 					"modules": false
 				}
 			],
-			"react"
-		],
-		"plugins": [
-			"transform-object-rest-spread"
+			"@babel/preset-react"
 		]
 	}
 }

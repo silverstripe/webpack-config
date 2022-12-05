@@ -11,17 +11,14 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
   return {
     rules: [
       {
-        // .js and .jsx files are caught
-        test: /\.jsx?$/,
+        // .js, .mjs, and .jsx files are caught
+        test: /\.m?jsx?$/,
         exclude: new RegExp(`(${MODULES}|${THIRDPARTY})`),
         loader: 'babel-loader',
         options: {
           presets: [
-            ['env', { modules: false }],
-            'react',
-          ],
-          plugins: [
-            'transform-object-rest-spread',
+            ['@babel/preset-env', { useBuiltIns: 'usage', corejs: '3', modules: 'commonjs' }],
+            '@babel/preset-react',
           ],
           comments: false,
           cacheDirectory: (ENV !== 'production'),
@@ -36,15 +33,29 @@ module.exports = (ENV, { MODULES, THIRDPARTY }) => {
         },
       },
       {
-        test: '/i18n.js/',
-        use: 'script-loader',
+        /*
+          Allows importing raw content from a file.
+          Usage: import content from 'some-file.txt?raw'
+
+          Also used to execute a script in the global context (replaces script-loader):
+          import('someScript?raw').then(rawModule => eval.call(null, rawModule.default));
+        */
+        resourceQuery: /raw/,
+        type: 'asset/source',
+        generator: {
+          emit: false,
+        },
       },
       {
-        test: /\.modernizrrc$/,
+        test: /\.modernizrrc.js$/,
+        use: [ '@sect/modernizr-loader' ]
+      },
+      {
+        test: /\.modernizrrc(\.json)?$/,
         use: [
-          'modernizr-loader',
-          'json-loader',
-        ],
+          '@sect/modernizr-loader',
+          'json-loader'
+        ]
       },
     ],
   };
