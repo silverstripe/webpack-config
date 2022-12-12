@@ -19,7 +19,7 @@ module.exports = class CssWebpackConfig extends BaseWebpackConfig {
       output: {
         path: PATHS.DIST,
       },
-      devtool: (ENV !== 'production') ? 'source-map' : '',
+      devtool: (ENV !== 'production') ? 'source-map' : false,
       module: moduleCSS(ENV, PATHS),
       plugins: pluginCSS(ENV, PATHS, filename),
     });

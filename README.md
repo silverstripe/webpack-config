@@ -212,7 +212,7 @@ module.exports = [
       path: PATHS.DIST,
       filename: 'js/[name].js',
     },
-    devtool: (ENV !== 'production') ? 'source-map' : '',
+    devtool: (ENV !== 'production') ? 'source-map' : false,
     resolve: resolveJS(ENV, PATHS),
     externals: externalJS(ENV, PATHS),
     module: moduleJS(ENV, PATHS),
@@ -228,7 +228,7 @@ module.exports = [
     output: {
       path: PATHS.DIST,
     },
-    devtool: (ENV !== 'production') ? 'source-map' : '',
+    devtool: (ENV !== 'production') ? 'source-map' : false,
     module: moduleCSS(ENV, PATHS),
     // Pass the filename here, which will get passed down to MiniCssExtractPlugin
     plugins: pluginCSS(ENV, PATHS, 'css/[name].css'),
