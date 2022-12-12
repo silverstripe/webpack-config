@@ -19,7 +19,7 @@ module.exports = class JavascriptWebpackConfig extends BaseWebpackConfig {
         path: PATHS.DIST,
         filename: 'js/[name].js',
       },
-      devtool: (ENV !== 'production') ? 'source-map' : '',
+      devtool: (ENV !== 'production') ? 'source-map' : false,
       resolve: resolveJS(ENV, PATHS),
       module: moduleJS(ENV, PATHS),
       externals: externalJS(ENV, PATHS, moduleName),
