@@ -53,19 +53,21 @@ module.exports = class BaseWebpackConfig {
 
     this.#vendorChunk = vendorChunk;
 
-    this.#config.optimization = {
-      splitChunks: {
-        cacheGroups: {
-          vendor: {
-            name: vendorChunk,
-            test: test,
-            reuseExistingChunk: true,
-            enforce: true,
-            chunks: 'all',
+    this.mergeConfig({
+      optimization: {
+        splitChunks: {
+          cacheGroups: {
+            vendor: {
+              name: vendorChunk,
+              test: test,
+              reuseExistingChunk: true,
+              enforce: true,
+              chunks: 'all',
+            }
           }
         }
       }
-    };
+    });
 
     // ensure entries are configured to "depend on" the vendor entry if necessary
     this.#splitVendorFromEntries();
