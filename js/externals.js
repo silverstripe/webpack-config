@@ -54,6 +54,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/TreeDropdownField/TreeDropdownFieldNode': 'TreeDropdownFieldNode',
       'components/VersionedBadge/VersionedBadge': 'VersionedBadge',
       'components/ViewModeToggle/ViewModeToggle': 'ViewModeToggle',
+      'containers/EmotionCssCacheProvider/EmotionCssCacheProvider': 'EmotionCssCacheProvider',
       'containers/FormBuilderLoader/FormBuilderLoader': 'FormBuilderLoader',
       'containers/InsertLinkModal/InsertLinkModal': 'InsertLinkModal',
       'containers/InsertLinkModal/fileSchemaModalHandler': 'FileSchemaModalHandler',
@@ -84,8 +85,7 @@ module.exports = (ENV, PATHS, module) => {
       // bundles/bundle.js aliases
       config: 'Config', // alias for lib/Config
       // bundles/vendor.js
-      // @apollo/client can't be exposed - see https://github.com/webpack-contrib/expose-loader/issues/188
-      // '@apollo/client': 'ApolloClient',
+      '@apollo/client': 'ApolloClient',
       classnames: 'classnames',
       'deep-freeze-strict': 'DeepFreezeStrict',
       'graphql-fragments': 'GraphQLFragments',
