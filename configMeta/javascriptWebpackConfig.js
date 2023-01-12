@@ -25,7 +25,7 @@ module.exports = class JavascriptWebpackConfig extends BaseWebpackConfig {
       module: moduleJS(ENV, PATHS),
       externals: externalJS(ENV, PATHS, moduleName),
       plugins: pluginJS(ENV),
-      optimization: {
+      optimization: (ENV !== 'production') ? {} : {
         minimize: true,
         minimizer: [
           new TerserPlugin({
