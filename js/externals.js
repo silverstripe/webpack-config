@@ -71,6 +71,7 @@ module.exports = (ENV, PATHS, module) => {
       'lib/ShortcodeSerialiser': 'ShortcodeSerialiser',
       'lib/SilverStripeComponent': 'SilverStripeComponent',
       'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
+      'lib/urls': 'ssUrlLib',
       'lib/withDragDropContext': 'withDragDropContext',
       'lib/withRouter': 'withRouter',
       'state/breadcrumbs/BreadcrumbsActions': 'BreadcrumbsActions',
