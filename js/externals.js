@@ -87,6 +87,7 @@ module.exports = (ENV, PATHS, module) => {
       config: 'Config', // alias for lib/Config
       // bundles/vendor.js
       '@apollo/client': 'ApolloClient',
+      '@apollo/client/react/hoc': 'ApolloClientReactHoc',
       classnames: 'classnames',
       'deep-freeze-strict': 'DeepFreezeStrict',
       'graphql-fragments': 'GraphQLFragments',
@@ -103,9 +104,13 @@ module.exports = (ENV, PATHS, module) => {
       'react-dnd': 'ReactDND',
       'react-dnd-html5-backend': 'ReactDNDHtml5Backend',
       'react-dom': 'ReactDom',
+      'react-dom/client': 'ReactDomClient',
       'react-redux': 'ReactRedux',
       'react-router-dom': 'ReactRouterDom',
       'react-select': 'ReactSelect',
+      'react-select/async': 'ReactSelectAsync',
+      'react-select/async-creatable': 'ReactSelectAsyncCreatable',
+      'react-select/creatable': 'ReactSelectCreatable',
       reactstrap: 'Reactstrap',
       redux: 'Redux',
       'redux-form': 'ReduxForm',
