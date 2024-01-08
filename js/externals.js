@@ -44,6 +44,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/ResizeAware/ResizeAware': 'ResizeAware',
       'components/Search/Search': 'Search',
       'components/Search/SearchToggle': 'SearchToggle',
+      'components/SearchableDropdownField/SearchableDropdownField': 'SearchableDropdownField',
       'components/Tag/CompactTagList': 'CompactTagList',
       'components/Tag/Tag': 'Tag',
       'components/Tag/TagList': 'TagList',
