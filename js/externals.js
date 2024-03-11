@@ -39,6 +39,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/LiteralField/LiteralField': 'LiteralField',
       'components/Loading/CircularLoading': 'CircularLoading',
       'components/Loading/Loading': 'Loading',
+      'components/Modal/Modal': 'Modal',
       'components/PopoverField/PopoverField': 'PopoverField',
       'components/Preview/Preview': 'Preview',
       'components/ResizeAware/ResizeAware': 'ResizeAware',
