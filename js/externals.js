@@ -42,6 +42,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/Modal/Modal': 'Modal',
       'components/PopoverField/PopoverField': 'PopoverField',
       'components/Preview/Preview': 'Preview',
+      'containers/ReactHookForm/ReactHookForm': 'ReactHookForm',
       'components/ResizeAware/ResizeAware': 'ResizeAware',
       'components/Search/Search': 'Search',
       'components/Search/SearchToggle': 'SearchToggle',
