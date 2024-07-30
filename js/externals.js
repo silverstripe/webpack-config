@@ -90,12 +90,8 @@ module.exports = (ENV, PATHS, module) => {
       // bundles/bundle.js aliases
       config: 'Config', // alias for lib/Config
       // bundles/vendor.js
-      '@apollo/client': 'ApolloClient',
-      '@apollo/client/react/hoc': 'ApolloClientReactHoc',
       classnames: 'classnames',
       'deep-freeze-strict': 'DeepFreezeStrict',
-      'graphql-fragments': 'GraphQLFragments',
-      'graphql-tag': 'GraphQLTag',
       'isomorphic-fetch': 'IsomorphicFetch',
       jquery: 'jQuery',
       merge: 'merge',
