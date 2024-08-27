@@ -67,6 +67,7 @@ module.exports = (ENV, PATHS, module) => {
       'lib/DataFormat': 'DataFormat',
       'lib/formatWrittenNumber': 'formatWrittenNumber',
       'lib/getFormState': 'getFormState',
+      'lib/getJsonErrorMessage': 'getJsonErrorMessage',
       'lib/Injector': 'Injector',
       'lib/ReactRouteRegister': 'ReactRouteRegister',
       'lib/reduxFieldReducer': 'reduxFieldReducer',
