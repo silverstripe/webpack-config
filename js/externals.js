@@ -76,7 +76,6 @@ module.exports = (ENV, PATHS, module) => {
       'lib/schemaFieldValues': 'schemaFieldValues',
       'lib/ShortcodeSerialiser': 'ShortcodeSerialiser',
       'lib/SilverStripeComponent': 'SilverStripeComponent',
-      'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
       'lib/urls': 'ssUrlLib',
       'lib/withRouter': 'withRouter',
       'state/breadcrumbs/BreadcrumbsActions': 'BreadcrumbsActions',
@@ -119,8 +118,17 @@ module.exports = (ENV, PATHS, module) => {
     },
     'silverstripe/asset-admin/js': {
       // bundles/bundle.js
-      'containers/InsertEmbedModal/InsertEmbedModal': 'InsertEmbedModal',
+      'components/InsertEmbedModal/InsertEmbedModal': 'InsertEmbedModal',
       'containers/InsertMediaModal/InsertMediaModal': 'InsertMediaModal',
+      'state/modal/AssetAdminModalActions': 'AssetAdminModalActions',
+    },
+    'silverstripe/cms/js': {
+      // bundles/bundle.js
+      'state/anchorSelector/AnchorSelectorActions': 'AnchorSelectorActions',
+    },
+    'silverstripe/htmleditor-tinymce/js': {
+      // bundle.js
+      'lib/TinyMCEActionRegistrar': 'TinyMCEActionRegistrar',
     },
     // Provided by silverstripe/admin's i18n.js, but doesn't use expose-loader
     i18n: 'i18n',
