@@ -57,6 +57,8 @@ module.exports = (ENV, PATHS, module) => {
       'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
       'components/TreeDropdownField/TreeDropdownFieldMenu': 'TreeDropdownFieldMenu',
       'components/TreeDropdownField/TreeDropdownFieldNode': 'TreeDropdownFieldNode',
+      'components/UnsavedChangesIndicator/UnsavedChangesIndicator': 'UnsavedChangesIndicator',
+      'components/UnsavedChangesIndicator/UnsavedChangesIndicatorTimer': 'UnsavedChangesIndicatorTimer',
       'components/VersionedBadge/VersionedBadge': 'VersionedBadge',
       'components/ViewModeToggle/ViewModeToggle': 'ViewModeToggle',
       'containers/EmotionCssCacheProvider/EmotionCssCacheProvider': 'EmotionCssCacheProvider',
