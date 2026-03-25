@@ -51,7 +51,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/Tag/CompactTagList': 'CompactTagList',
       'components/Tag/Tag': 'Tag',
       'components/Tag/TagList': 'TagList',
-      'components/TextField/InputField': 'InputField',
+      'components/InputField/InputField': 'InputField',
       'components/TextField/TextField': 'TextField',
       'legacy/ReactComponents/LegacyInputField': 'LegacyInputField',
       'legacy/ReactComponents/LegacyDateField': 'LegacyDateField',
