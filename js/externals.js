@@ -60,6 +60,7 @@ module.exports = (ENV, PATHS, module) => {
       'components/Tip/Tip': 'Tip',
       'components/Toolbar/Toolbar': 'Toolbar',
       'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
+      'legacy/ReactComponents/LegacyTreeDropdownField': 'LegacyTreeDropdownField',
       'components/TreeDropdownField/TreeDropdownFieldMenu': 'TreeDropdownFieldMenu',
       'components/TreeDropdownField/TreeDropdownFieldNode': 'TreeDropdownFieldNode',
       'components/VersionedBadge/VersionedBadge': 'VersionedBadge',
