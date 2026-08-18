@@ -1,6 +1,6 @@
 {
 	"name": "@silverstripe/webpack-config",
-	"version": "3.2.1",
+	"version": "3.3.0",
 	"description": "SilverStripe config files for modules",
 	"engines": {
 		"node": ">=18.x"
@@ -45,8 +45,9 @@
 		"postcss-load-config": "^4.0.1",
 		"postcss-loader": "^7.0.1",
 		"resolve-url-loader": "^5.0.0",
-		"sass": "^1.55.0",
+		"sass": ">=1.55.0 <1.100.0",
 		"sass-loader": "^13.1.0",
+		"terser-webpack-plugin": "^5.3.16",
 		"webpack": "^5.74.0",
 		"webpack-bundle-analyzer": "^4.7.0"
 	},
