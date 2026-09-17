@@ -57,6 +57,7 @@ module.exports = (ENV, PATHS, module) => {
       'legacy/ReactComponents/LegacyDateField': 'LegacyDateField',
       'legacy/ReactComponents/LegacyDatetimeField': 'LegacyDatetimeField',
       'legacy/ReactComponents/LegacyTextField': 'LegacyTextField',
+      'legacy/ReactComponents/LegacyLiteralField': 'LegacyLiteralField',
       'components/Tip/Tip': 'Tip',
       'components/Toolbar/Toolbar': 'Toolbar',
       'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
