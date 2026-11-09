@@ -64,6 +64,7 @@ module.exports = (ENV, PATHS, module) => {
       'legacy/ReactComponents/LegacyFieldHolder': 'LegacyFieldHolder',
       'legacy/ReactComponents/LegacyFormAction': 'LegacyFormAction',
       'legacy/ReactComponents/LegacyHiddenField': 'LegacyHiddenField',
+      'legacy/ReactComponents/LegacyTreeDropdownField': 'LegacyTreeDropdownField',
       'components/Tip/Tip': 'Tip',
       'components/Toolbar/Toolbar': 'Toolbar',
       'components/TreeDropdownField/TreeDropdownField': 'TreeDropdownField',
